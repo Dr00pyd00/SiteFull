@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'home',
     'authenticate',
     'cats',
+    'js_first',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
