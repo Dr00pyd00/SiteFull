@@ -1,8 +1,32 @@
 {% extends 'home/base.html' %}
+{% load static %}
 
     
 {% block content %}
 
-<h1>Page de js</h1>
+<h1 id="title">Choisis Ma Couleur !</h1>
+
+<button data-color="red">Red</button>
+<button data-color="green">Green</button>
+<button data-color="blue">Blue</button>
+
+<hr>
+
+<h3>Met ton nom et je t'envoie une alerte !</h3>
+
+<input type="text" name="" id="name" placeholder="ton nom...">
+<input type="submit" value="Alert!" name="" id="sub-nom">
+
+
+<hr>
+<h2 id="write-color">Choisi ma couleur en écrivant en dessous:</h2>
+
+<div id="message"></div>
+
+<input type="text" id="color-chose">
+<button id="set-color">Change!</button>
+
+
+<script src="{% static 'js_first/page_color.js' %}"></script>
 
 {% endblock content %}
