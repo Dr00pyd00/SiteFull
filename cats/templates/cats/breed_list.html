@@ -1,0 +1,22 @@
+{% extends 'home/base.html' %}
+
+    
+{% block content %}
+
+<h1>Liste des races !</h1>
+
+<ul>
+    {% for breed in breed_list %}
+    <li>
+        {{breed}}  ||
+        <a href="{% url 'cats:breed_update' breed.id %}">editer</a>//
+        <a href="{% url 'cats:breed_delete' breed.id %}">supprimer</a>
+    </li>
+
+    {% endfor %}
+</ul>
+
+
+<a href="{% url 'cats:cat_list' %}"><button>Retour</button></a>
+
+{% endblock content %}

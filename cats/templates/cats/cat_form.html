@@ -1,0 +1,30 @@
+{% extends 'home/base.html' %}
+
+    
+{% block content %}
+
+<!-- Vu que cette page sert a la fois pour : Create /Upadte 
+ je vais gerer le titre en if : -->
+<h1>
+    {% if object.pk %}
+        Update de {{object.nickname}} :
+    {% else %}
+        Creation d'un chat !
+    {% endif %}
+</h1>
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+
+    {% if object.pk %}
+            <input type="submit" value="Update!" name="" id="">
+    {% else %}
+        <input type="submit" value="Creation" name="" id="">
+    {% endif %}
+
+    </form>
+    <a href="{% url 'cats:cat_list' %}">Retour</a>
+
+{% endblock content %}

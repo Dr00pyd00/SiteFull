@@ -1,0 +1,60 @@
+{% extends 'home/base.html' %}
+
+    
+{% block content %}
+
+<h1>Liste des Chats!</h1>
+
+
+
+    {% if cat_list %}
+
+    <ul>        
+        {% for cat in cat_list %}
+            <li>
+                <a href="{% url 'cats:cat_detail' cat.id %}">{{cat}}</a>
+                 -- race: {{cat.breed}}  // poids: {{cat.weight}} kg(s)  ||
+                <!-- edit : update/delete -->
+                <a href="{% url 'cats:cat_update' cat.id %}">edit</a>/
+                <a href="{% url 'cats:cat_delete' cat.id %}">delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+    {% else %}
+        <p>
+            Pas de chats dans la base de donnée !
+        </p>
+    {% endif %}
+
+    <div>
+        Ajouter un chat <a href="{% url 'cats:cat_create' %}">ici</a> !
+    </div>      
+
+    <!-- Section pour les races: -->
+
+<hr>
+
+<p>
+    Il y a {{nb_breed}} races disponible pour le moment !
+</p>
+<ul>
+    <li>
+        Pour voir la liste des races : <a href="{% url 'cats:breed_list' %}">ici</a>
+    </li>
+    <li>
+        Pour ajouter une race : <a href="{% url 'cats:breed_create' %}">ici</a>
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

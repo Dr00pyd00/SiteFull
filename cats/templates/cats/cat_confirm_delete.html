@@ -1,0 +1,14 @@
+{% extends 'home/base.html' %}
+
+    
+{% block content %}
+
+<h1>Suppression</h1>
+<h3>Voulez vous vraiment supprimer {{object.nickname}} ?</h3>
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Supprimer!" name="" id="">
+</form>
+<a href="{% url 'cats:cat_list' %}">RETOUR</a>
+
+{% endblock content %}

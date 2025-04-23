@@ -1,0 +1,31 @@
+{% extends 'home/base.html' %}
+
+    
+{% block content %}
+
+<h1>Fiche de {{cat.nickname}}</h1>
+
+<ul>
+    <li>
+        Nom : {{cat}}
+    </li>
+    <li>
+        Race : {{cat.breed}}
+    </li>
+    <li>
+        Poids : {{cat.weight}} kg
+    </li>
+    <li>
+        Nourriture : {{cat.food}}
+    </li>
+</ul>
+
+<div>
+    <p>
+        <!-- edit : update/delete -->
+        <a href="{% url 'cats:cat_update' cat.id %}">edit</a>/
+        <a href="{% url 'cats:cat_delete' cat.id %}">delete</a>
+    </p>
+</div>
+
+{% endblock content %}
