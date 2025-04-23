@@ -1,3 +1,4 @@
 my_world/
 __pycache__/
 *.pyc
+my_env/
