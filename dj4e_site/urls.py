@@ -13,6 +13,9 @@ urlpatterns = [
     path('cats/', include('cats.urls')),
 
     path('js_first/', include('js_first.urls')),
+    
+    path('convertisseur/', include('convertisseur.urls')),
+    
 
     
 ]

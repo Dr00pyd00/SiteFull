@@ -1,0 +1,32 @@
+{% extends 'home/base.html' %}
+{% load static  %}
+
+    
+{% block content %}
+
+<h1>Convertisseur</h1>
+<br>
+
+<label for="monnaie-entrante">Monnaie de base:</label>
+<select name="" id="monnaie-entrante"></select>
+<br>
+
+<label for="somme">Somme à convertir:</label>
+<input type="number" name="" id="somme">
+<br>
+
+<label for="monnaie-sortante">Monnaie voulu:</label>
+<select name="" id="monnaie-sortante"></select>
+<br>
+
+<button id="convertir">Convertir</button>
+
+
+<div id="result"></div>
+
+
+
+<script src="{% static 'convertisseur/convertisseur.js' %}"></script>
+
+
+{% endblock content %}
