@@ -2,18 +2,22 @@
 <div>
     {% if request.user.is_authenticated %}
         <p>
-            Hello {{request.user.username}} ! <br>
+            😺 Hello {{request.user.username}} ! <br>
             <span>
-                You can logout <a href="{% url 'authenticate:logout_page' %}">here</a> !
+               🔐 You can logout <a href="{% url 'authenticate:logout_page' %}">here</a> !
             </span>
         </p>
     {% else %}
         <p>
-            Who are you ??! <br>
-            You can login <a href="{% url 'authenticate:login_page' %}">here</a> ! <br>
-            <small>
-                Pas encore inscrit ?  => <a href="{% url 'authenticate:registration' %}">ici!</a>
-            </small>
+            &rarr; Who are you? <br>
+            🔑 You can login <a href="{% url 'authenticate:login_page' %}">here</a> ! <br>
+            
+            <div class="centered">
+                <small>
+                    &rarr; Pas encore inscrit ?  => <a href="{% url 'authenticate:registration' %}">ici!</a>
+                </small>
+            </div>
+
         </p>
 
     {% endif %}
