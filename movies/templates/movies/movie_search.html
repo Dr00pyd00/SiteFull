@@ -1,0 +1,41 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+    
+{% block content %}
+
+<h1>Search a Movie!</h1> <br>
+
+<div>
+    <form action="" id="movie_form">
+        <label for="textInput">Search for a movie:</label>
+        <input type="text" name="" id="textInput" placeholder="Movie Name...">
+        <input type="submit" name="" id="" value="Search!">
+    </form>
+</div>
+<hr>
+
+<div id="'msg"></div>
+
+<div id="result">
+    <h2 id="title"></h2>
+    <br>
+    <p id="plot"></p>
+    <br>
+    <!-- acteurs -->
+    <div >
+        <h5 id="actor_header"></h5>
+        <ul id="actors" ></ul>
+    </div>
+    <!-- box office -->
+    <div>
+        <h5 id="box_header"></h5>
+        <span id="box_value"></span>
+    </div>
+</div>
+
+
+
+<script src="{% static 'movies/movie_search.js' %}"></script>
+
+{% endblock content %}

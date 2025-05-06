@@ -20,8 +20,13 @@ urlpatterns = [
     
     path('dogs/', include('dogs.urls')),
     
+    path('movies/', include('movies.urls')),
+    
+    
+    
     
     
 
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
