@@ -1,0 +1,21 @@
+{% extends 'home/base.html' %}
+
+    
+{% block content %}
+<h1>Dogs Page !</h1>
+
+ <h4> ==> Go to Dog App managed by Python/Django: <a href="{%  url 'dogs:dog_list' %}">here</a>.</h4>
+
+
+ <h4> ==> Go to Dog App managed by JS/DjangoApi : <a href="{%  url 'dogs:dog_list_by_api' %}">here</a>.</h4>
+
+
+
+
+
+
+<br><br>
+<hr>
+<a href="{% url 'dogs:index' %}" class="btn btn-primary">Index</a>
+
+{% endblock content %}

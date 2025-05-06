@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+{% load static %}
+    
+{% block content %}
+
+<h1> Page with JS/Api,  List Dog !</h1>
+
+<!-- affichage des chiens  -->
+<ul id="dogs"></ul>
+
+
+
+<!-- ajout d'un chien -->
+<hr>
+<form action="" enctype="multipart/form-data" id="dog_form">
+    <input type="text" name="name" id="dog_name" placeholder="Dog Name">
+    <input type="text" name="description" id="dog_description" placeholder="Description !">
+    <input type="file" accept="image/*" name="image" id="dog_image">
+    <button type="submit" class="btn btn-primary">Add Dog!</button>
+</form>
+
+
+
+
+
+<script type="module" src="{% static 'dogs/main.js' %}"></script>
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+
+    
+{% block content %}
+
+<h4>Are you sure to delete {{dog.name}}</h4>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="DELETE" name="" id="">
+</form>
+
+<br><br>
+<a href="{% url 'dogs:index' %}" class="btn btn-primary">Index</a>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'home/base.html' %}
+
+    
+{% block content %}
+<h1>Dogs List Page !</h1>
+
+<hr>
+<h4><a href="{% url 'dogs:dog_create' %}" class="btn btn-primary">Add Dog!</a></h4>
+<hr>
+
+<ul>
+
+    {% for dog in dogs %}
+        <li>
+              
+            <a href="{% url 'dogs:dog_detail' dog.id %}">{{dog.name}} </a>
+            
+            // <img src="{{dog.image.url}}" alt="chien" width="150">  
+            // <a href="{% url 'dogs:dog_delete' dog.id %}">delete</a>  
+            // <a href="{% url 'dogs:dog_update' dog.id %}">update</a>
+        </li>
+    {% endfor %}
+
+
+</ul>
+
+
+
+<br><br>
+<hr>
+<a href="{% url 'dogs:index' %}" class="btn btn-primary">Index</a>
+
+{% endblock content %}

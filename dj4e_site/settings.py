@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'cats',
     'js_first',
     'convertisseur',
+    'dogs',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -131,3 +132,6 @@ AUTH_USER_MODEL = 'authenticate.CustomUser'
 
 # je gere la page envoyer lors de LoginRequiredMixin !
 LOGIN_URL = reverse_lazy('authenticate:login_page')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
