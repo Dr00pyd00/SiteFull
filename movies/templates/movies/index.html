@@ -1,0 +1,19 @@
+{% extends 'home/base.html' %}
+
+    
+{% block content %}
+
+    <h1>Search a Movie informations !</h1>
+
+    <p>
+        Here it's just a little project about api testing! <br>
+        I use <a href="https://www.omdbapi.com/">OMDb API</a> for this app.
+    </p> <br>
+
+    <h4>Two differents methods:</h4>
+    <ul>
+        <li>No secure frontend query : <a href="{% url 'movies:movie_search' %}">here</a> </li>
+        <li>Backend gestion for security and good practice : <a href="{% url 'movies:movie_search_api' %}">here</a> </li>
+    </ul>
+
+{% endblock content %}
